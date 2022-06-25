@@ -1,13 +1,10 @@
-
 function validar(){
     var nom= document.getElementById("nombre");
     var tel= document.getElementById("telefono");
     var vacio=true;
-    
-
     var alerta= "Siguientes campos estan vacios:"
-    if(nom.value==""){
 
+    if(nom.value==""){
         nom.style= "border: 1px solid red;";
         alerta+=" \n\rNombre";
     }
@@ -16,7 +13,6 @@ function validar(){
     }
     
     if(tel.value==""){
-       
         tel.style= "border: 1px solid red;";
         alerta+=" \n\rTelefono";
 
@@ -27,25 +23,17 @@ function validar(){
         tel.style="border: 1px solid black;"
     }
         
-
-
-
     if(nom.value=="" || tel.value==""){
         alert(alerta);
     }else {
         vacio=false;
     }
 
-
-
-
-    var i=0;
+    var i;
     var x= nom.value.length;
 
-    //alert(isNaN(nom.value[1]));
-
     if(!vacio){
-    for(i; i< x; i++){
+    for(i=0; i< x; i++){
         if(!isNaN(nom.value[i])){
             alert("El campo Nombre no debe contener valores Numericos");
             nom.style= "border: 1px solid red;";
